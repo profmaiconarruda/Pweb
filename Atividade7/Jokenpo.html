@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Jokenpo</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+
+    <script src="./script/junkepo.js"></script>
+
+    <h1>Jogo Jokenpo</h1>
+    <h2>Desenvolvido por: David Tobias Nunes e Maicon de Arruda Rodrigues</h2>
+    <p>Escolha uma opção e o computador selecionará aleatório:</p>
+
+    <button class="button" onclick="play('pedra')">
+        <img src="./img/pedra.png" alt="Pedra">
+    </button>
+    <button class="button" onclick="play('papel')">
+        <img src="./img/papel.png" alt="Papel">
+    </button>
+    <button class="button" onclick="play('tesoura')">
+        <img src="./img/tesoura.png" alt="Tesoura">
+    </button>
+
+    <div class="result" id="result"></div>
+</body>
+
+</html>
