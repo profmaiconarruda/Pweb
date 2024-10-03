@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa</title>
+    <link rel="stylesheet" href="./stylesheet/css/pesquisa.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Pesquisa</h1>
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="campo">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" min="0" max="120" required>
+                </div>
+                <div class="campo">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" required>
+                        <option value="">Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Avaliação</legend>
+                <div class="campo">
+                    <label for="opiniao">Opinião:</label>
+                    <select id="opiniao" required>
+                        <option value="">Selecione</option>
+                        <option value="otimo">Ótimo</option>
+                        <option value="bom">Bom</option>
+                        <option value="regular">Regular</option>
+                        <option value="pessimo">Péssimo</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="button" onclick="processarFormulario()">Enviar</button>
+        </form>
+        <div class="resultados" id="resultados"></div>
+    </div>
+
+    <script src="./script/js/pequisa.js"></script>      
+    
+</body>
+</html>
