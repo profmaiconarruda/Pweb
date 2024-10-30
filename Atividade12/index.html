@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site Simples</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <header>
+    <h1>Atividade 12</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Seção Retângulo</h2>
+      <label for="base">Base:</label>
+      <input type="number" id="base" name="base">
+      <label for="altura">Altura:</label>
+      <input type="number" id="altura" name="altura">
+      <button onclick="calcularArea()">Calcular Área</button>
+      <p>A área do retângulo é: <span id="area-retangulo"></span></p>
+    </section>
+
+    <section>
+      <h2>Seção Conta</h2>
+      <label for="nome-correntista">Nome do Correntista:</label>
+      <input type="text" id="nome-correntista" name="nome-correntista">
+      <label for="nome-banco">Nome do Banco:</label>
+      <input type="text" id="nome-banco" name="nome-banco">
+      <label for="numero-conta">Número da Conta:</label>
+      <input type="text" id="numero-conta" name="numero-conta">
+      <label for="saldo">Saldo:</label>
+      <input type="number" id="saldo" name="saldo">
+      <button onclick="criarConta()">Criar Conta</button>
+      <div id="conta-corrente"></div>
+      <div id="conta-poupanca"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Atividade 12</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
