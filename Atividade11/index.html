@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demonstração de Objetos JavaScript</title>
+    <link rel="stylesheet" href="./estilo.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Demonstração de Objetos JavaScript</h1>
+
+        <!-- Seção do objeto original -->
+        <div class="section">
+            <h2>1. Objeto Original (Exponenciação)</h2>
+            <button onclick="mostrarResultadoExponenciacao()">Calcular x^y</button>
+            <div id="resultado-exp" class="result"></div>
+            <div class="code-display">
+                let obj = {
+                x: 10,
+                y: 2,
+                z: function() {
+                return this.x ** this.y;
+                }
+                };</div>
+        </div>
+
+        <!-- Seção dos Funcionários -->
+        <div class="section">
+            <h2>2. Objetos Funcionário - 3 Formas Diferentes</h2>
+
+            <h3>Forma 1: Notação Literal</h3>
+            <button onclick="mostrarFuncionario1()">Mostrar Funcionário 1</button>
+            <div id="func1" class="result"></div>
+
+            <h3>Forma 2: Função Construtora</h3>
+            <button onclick="mostrarFuncionario2()">Mostrar Funcionário 2</button>
+            <div id="func2" class="result"></div>
+
+            <h3>Forma 3: Object.create()</h3>
+            <button onclick="mostrarFuncionario3()">Mostrar Funcionário 3</button>
+            <div id="func3" class="result"></div>
+        </div>
+
+        <!-- Seção para modificar funcionário -->
+        <div class="section">
+            <h2>3. Modificar Funcionário</h2>
+            <select id="selectFuncionario">
+                <option value="1">Funcionário 1</option>
+                <option value="2">Funcionário 2</option>
+                <option value="3">Funcionário 3</option>
+            </select>
+            <input type="text" id="novoNome" placeholder="Novo nome">
+            <button onclick="modificarFuncionario()">Modificar Nome</button>
+            <div id="resultado-mod" class="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    </script>
+</body>
+
+</html>
