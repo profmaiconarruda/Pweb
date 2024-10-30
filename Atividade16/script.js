@@ -2,12 +2,9 @@ function abrirCurso() {
     const selecaoCurso = document.getElementById("selecao-curso").value;
 
     if (selecaoCurso) {
-        /* Bloco de confirmação antes de abrir o Pop Up
+
         const confirmar = confirm("Deseja abrir informações sobre o curso selecionado?");
-        if (confirmar)
-        */
-        
-        {
+        if (confirmar) {
 
 
             let conteudo = "";
