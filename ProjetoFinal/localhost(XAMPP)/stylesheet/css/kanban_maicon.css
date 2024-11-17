@@ -1,0 +1,271 @@
+       /* Reset e Variáveis */
+        :root {
+            --cor-principal: #2c3e50;
+            --cor-secundaria: #3498db;
+            --cor-sucesso: #2ecc71;
+            --cor-perigo: #e74c3c;
+            --cor-aviso: #f1c40f;
+            --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --raio-borda: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Estilos Base */
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--cor-principal);
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Grid Kanban */
+        .kanban {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Colunas */
+        .coluna {
+            background: rgba(255,255,255,0.95);
+            padding: 20px;
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-padrao);
+            min-height: 500px;
+        }
+
+        .coluna-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .coluna-titulo {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--cor-principal);
+        }
+
+        .contador-tarefas {
+            background: var(--cor-secundaria);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+
+        /* Cartões de Tarefas */
+        .cartao {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: var(--raio-borda);
+            box-shadow: var(--sombra-padrao);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .cartao:hover {
+            transform: translateY(-5px);
+        }
+
+        .cartao-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+
+        .cartao-titulo {
+            font-weight: 500;
+            color: var(--cor-principal);
+            margin-right: 40px;
+        }
+
+        .cartao-acoes {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .botao-acao {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            color: var(--cor-principal);
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .botao-acao:hover {
+            opacity: 1;
+        }
+
+        .botao-editar { color: var(--cor-secundaria); }
+        .botao-excluir { color: var(--cor-perigo); }
+
+        .cartao-conteudo {
+            margin: 10px 0;
+        }
+
+        .cartao-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .etiqueta {
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+
+        .prioridade-alta { background: #ffe0e0; color: var(--cor-perigo); }
+        .prioridade-media { background: #fff3cd; color: var(--cor-aviso); }
+        .prioridade-baixa { background: #d1e7dd; color: var(--cor-sucesso); }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-conteudo {
+            background: white;
+            padding: 30px;
+            border-radius: var(--raio-borda);
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        /* Formulário */
+        .formulario-grupo {
+            margin: 15px 0;
+        }
+
+        .formulario-grupo label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--cor-principal);
+            font-weight: 500;
+        }
+
+        .formulario-grupo input,
+        .formulario-grupo textarea,
+        .formulario-grupo select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--raio-borda);
+            font-size: 1em;
+        }
+
+        .botoes-grupo {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .botao {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: var(--raio-borda);
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .botao-primario {
+            background: var(--cor-sucesso);
+            color: white;
+        }
+
+        .botao-secundario {
+            background: var(--cor-perigo);
+            color: white;
+        }
+
+        .botao-novo {
+            background: var(--cor-secundaria);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--raio-borda);
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .kanban {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-conteudo {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .cartao {
+                padding: 12px;
+            }
+
+            .cartao-acoes {
+                position: static;
+                margin-top: 10px;
+            }
+
+            .botao-acao {
+                padding: 8px;
+            }
+        }
